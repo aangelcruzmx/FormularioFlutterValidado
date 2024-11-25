@@ -15,7 +15,7 @@ class ProductosApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Productos App',
-      initialRoute: LoginScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
         LoginScreen.routeName: (_) => LoginScreen(),
         HomeScreen.routeName: (_) => HomeScreen(),
@@ -23,7 +23,12 @@ class ProductosApp extends StatelessWidget {
         
       },
       theme: ThemeData.light().copyWith(
+        // el scaffoldBackgroundColor es el color de fondo de la app
         scaffoldBackgroundColor: Colors.grey[300],
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          color: Colors.indigo,
+        ),
       ),
     );
   }

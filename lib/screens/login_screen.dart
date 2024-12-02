@@ -79,7 +79,7 @@ class _LoginForm extends StatelessWidget {
               ),
               onChanged: (value) => loginForm.email = value,
               validator: (value) {
-                String pattern = r'^[^@]+@[^@]+\.[^@]+$';
+                String pattern = r'^[^@]+@[^@]+\.[^@]+$';//expresión regular para validar email
                 RegExp regExp = RegExp(pattern);
                 return regExp.hasMatch(value ?? '') ? null : 'Introduce un email válido';
               },
